@@ -13,4 +13,8 @@
   <ItemGroup>
     <None Remove="Views\Home\ToDo.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\js\shop.js" />
+    <Content Remove="wwwroot\js\todo.js" />
+  </ItemGroup>
 </Project>

@@ -8,3 +8,28 @@
     display: block;
     margin-bottom: 10px;
 }
+.mealImage{
+    width: 100%;
+}
+.grayScale{
+    filter: grayscale(100%)
+}
+.btn-onlyOne {
+    background-color: #f44336 !important;
+    color: white;
+    padding: 12px 24px !important;
+}
+.btn-soldOut {
+    color: #fff !important;
+    background-color: #616161 !important;
+    cursor: not-allowed;
+    opacity: .3;
+    padding: 12px 24px !important;
+}
+.mealPrice {
+    font-size: 28px;
+    text-align: center;
+}
+.mealTitle{
+    font-weight: lighter;
+}
