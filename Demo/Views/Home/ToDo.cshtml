@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Todo List";
+}
+
+<h2>Todo List</h2>
+
+<div class="row">
+    <div class="input-group col-md-4">
+        <input data-bind="value: todoInput" type="text" placeholder="add Todo.." class="form-control"> 
+        <span class="input-group-btn">
+            <button data-bind="click: addTask" type="button" class="btn btn-success"><span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
+            </button>
+        </span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <h2>Todo List:</h2>
+            <ol data-bind="foreach: toDoList">
+                <li>
+                    <div data-bind="visible: !isEditing()">
+                        <label>
+                            <input data-bind="click: toggleDone" type="checkbox">
+                            <span data-bind="text: desc" />
+                        </label> 
+                        <button data-bind="click: changeDesc" class="btn btn-xs btn-primary"><span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></button> 
+                        <button data-bind="click: $parent.removeTask" class="btn btn-xs btn-danger"><span aria-hidden="true" class="glyphicon glyphicon-trash"></span></button>
+                    </div>
+                    <div data-bind="visible: isEditing()">
+                        <input data-bind="value: newDesc, valueUpdate: 'input', executeOnEnter: onPressEnter, event: { blur: onBlur}" type="text" />
+
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <h2>Done List:</h2>
+            <ol data-bind="foreach: doneList">
+                <li>
+                    <div>
+                        <label>
+                            <input data-bind="click: toggleDone, checked: done" type="checkbox">
+                            <span data-bind="text: desc" />
+                        </label> 
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+</div>

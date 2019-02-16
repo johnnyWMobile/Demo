@@ -10,4 +10,7 @@
     <PackageReference Include="knockoutjs" Version="3.4.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Home\ToDo.cshtml" />
+  </ItemGroup>
 </Project>
